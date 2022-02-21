@@ -15,6 +15,7 @@ $(document).ready(function () {
         }
     });
 
+    // set var for adding items to cart
     var cart = 0;
     var Addsm = 0;
     var Addmd = 0;
@@ -49,20 +50,31 @@ $(document).ready(function () {
         if (!$(".btn-size").hasClass("active")) {
             alert("Error no Selected Size");
         }
-
-        $(".btn-cart").mouseover(function () {
-            if (cart) {
-                $(".btn-cart").addClass("active");
-                $(".cart-container").show();
-            }
-        });
-
-        $(".cart-container").mouseleave(function () {
-            $(".btn-cart").removeClass("active");
-            $(".cart-container").hide();
-        });
     });
 
+    $(".btn-cart").click(function () {
+        console.log("click!");
+        if (cart) {
+            $(".btn-cart").addClass("active");
+            $(".cart-container").show();
+        }
+    });
 
+    $(".btn-cart").mouseover(function () {
+        console.log("hover!");
+        if (cart) {
+            $(".btn-cart").addClass("active");
+            $(".cart-container").show();
+        }
+    });
+
+    $(".cart-container").mouseleave(function () {
+        $(".btn-cart").removeClass("active");
+        $(".cart-container").hide();
+    });
+
+    $(document).click(function () {
+        $(".btn-cart").removeClass("active");
+        $(".cart-container").hide();
+    });
 });
-

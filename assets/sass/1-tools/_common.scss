@@ -1,0 +1,73 @@
+p, label{
+    color: $color-prime-2;    
+}
+.text-grey{
+    color: $color-prime-2;
+}
+.btn-black-border{
+    color: $color-prime-1;
+    border: 3px solid $border-dark-grey;
+    border-radius: 0px;
+    transition: 0.2;
+    &:hover{
+        color: $color-prime-3;
+        background-color: black;
+        transition: 0.2;
+    }
+}
+.btn-grey-border{
+    color: $color-prime-2;
+    border: 1px solid $border-light-grey;
+    border-radius: 0px;   
+}
+.btn-size{
+    color: $color-prime-2;
+    border: 1px solid $border-light-grey;
+    border-radius: 0px; 
+    height: 50px;  
+    width: 50px;  
+    text-transform: uppercase;
+    &.active{
+        border: 3px solid $border-dark-grey;
+    }
+}
+.text-red{
+    color: $color-red;
+}
+.bg-gray{
+    background-color: $header-bg-color;
+}
+.fw-600{
+    font-weight: 600;
+}
+button{   
+    outline: none;
+    box-shadow: none !important;
+}
+.cart-container{
+    position: absolute;
+    right: 0px;
+}
+.btn-cart{
+    position: relative;
+    background: transparent;
+    border: 1px solid transparent;
+    z-index: 9;
+    transition: none;
+    &.active{
+        background: $color-prime-3;
+        border: 1px solid $border-light-grey;
+        border-bottom: 1px solid #fff;
+        border-radius: 0px;
+        transition: none;
+        & .cart-container{
+            display: block;
+        }
+    }
+}
+.cart-container{
+    display: none;
+    border: 1px solid $border-light-grey;
+    z-index: 8;
+    transform: translateY(-1px);
+}

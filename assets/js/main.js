@@ -52,12 +52,13 @@ $(document).ready(function () {
         }
     });
 
-    $(".btn-cart").click(function () {
+    $(".btn-cart").click(function (event) {
         console.log("click!");
         if (cart) {
             $(".btn-cart").addClass("active");
             $(".cart-container").show();
         }
+        event.stopPropagation();
     });
 
     $(".btn-cart").mouseover(function () {
@@ -73,7 +74,8 @@ $(document).ready(function () {
         $(".cart-container").hide();
     });
 
-    $(document).click(function () {
+    $("body").click(function () {
+        console.log("body!");
         $(".btn-cart").removeClass("active");
         $(".cart-container").hide();
     });
